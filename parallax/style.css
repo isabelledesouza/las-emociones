@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+  
+  }
+
+  
+  main {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+  }
+  /*The smaller the value the more subtle and natural the parallax effect will seem.*/
+ .container {
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+  }
+  .marron {
+    color: #C05452;
+  }
+  img {
+    width: 100%;
+  }
+  .bg1 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  } 
+  
+  section {
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #38646D;
+    font-family: 'Corben', cursive;
+  }
+  .bg1 {
+    background: url("../images/bg1.svg");
+    background-size: cover;
+  }
+  .h1 {
+   padding: 20rem;
+    font-size: 2rem;
+    
+  }
+  .h1 blockquote {
+    line-height: 2;
+    display: inline;
+    background: linear-gradient(transparent 50%,rgba(253, 202, 96, 0.44) 85.0%, transparent 85%, transparent 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    animation: animatedBackground 3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s infinite ;
+  }
+  @keyframes animatedBackground {
+   to {
+        background-size: 100% 100%;
+    }
+}
+
+  
+  .no-parallax {
+    /*background-color: #111;*/
+    z-index: 999;
+  }
+  
+  .title-h3{
+    text-align: center;
+    font-size: 4rem;
+    font-family: sans-serif;
+    color: #006376;
+    padding-top: 20rem
+  }
+  .flex {
+   display: flex;
+
+  }
+  
+  .parallax h1 {
+    width: 60%;
+    font-size: 2rem;
+    
+  }
+ 
+  .parallax::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+  }
+  .bg::after {
+    background:url("../images/bg2.svg")  ;
+    
+    background-size: cover;
+  }
+  .h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: #006376;
+    width: 40vw;
+    height: 25vh;
+    background: #E2C581;
+    padding: 2rem;
+
+    
+   
+    
+  }
+  
+  
+  /*Meditation*/
+  .container-girl {
+    padding-top: 20rem;
+  }
+  .bg3 {
+    //background: #E2C581;
+   
+  // height: 140vh;
+   
+  }
+  .girl {
+    width: 45vw;
+  }
+  .container-yellow {
+    width: 80vw;
+    height: 280vh;
+    display: flex;
+    justify-content: center;
+  }
+  .containerR {
+    display: flex; 
+    height:50vh;
+    
+    justify-content: center; 
+    align-items: center;
+   
+  }
+  
+  .containerR::after {
+    content: "";
+    text-align: center;
+    position: absolute;
+  }
+  .containerR::before {
+     content: "";
+    text-align: center;
+    position: absolute;
+    animation-name: text;
+    animation-duration: 9s;	
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    animation-name: respirar;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    box-shadow: inset 0 0 0 4px rgba(0, 99, 118, 0.5);
+    z-index: -1;
+    border: 6px solid #006376;
+    
+  }
+   
+  
+  /*Animaciones*/
+  
+  @keyframes respirar {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes text {
+    0% {
+      content: 'inhala';
+    }
+    100% {
+      content: 'exhala';
+    }
+  }
+
+  /* Conversation */
+   /* Speech Balloon*/
+.conversation {
+  justify-content: center;
+  align-items: center;
+}
+.senhor {
+width: 30%;
+margin-top: 18rem;
+}
+.container-boy {
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+.container-boy .ballon {
+  margin-left: 4rem;
+}
+.ballon {
+  
+}
+.container-boy   #ballThree {
+  transform-origin: center;
+  animation: ScaleInOut 0.6s ease-in-out 0.2s infinite alternate;
+  
+}
+.container-boy  #ballTwo {
+  transform-origin: center;
+  animation: ScaleInOut 0.6s ease-in-out 0.4s infinite alternate;
+}
+.container-boy  #ballOne{
+  transform-origin: center;
+  animation: ScaleInOut 0.6s ease-in-out 0.6s infinite alternate;
+}
+.container-svg {
+  margin-left: 10rem;
+}
+@keyframes ScaleInOut {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+.boy {
+ width: 60%;
+}
+.bg-4 {
+  height: 40vh; 
+}
+.title-sad > h3 {
+  justify-self: end; 
+}
+ /*letra*/
+.escrita {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw 3s infinite  backwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+ 
+
+.ultimo-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  top: 150%;
+  
+}
+.text {
+  font-size: 1.2rem;
+  width: 30%;
+}
+.head-container {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out infinite;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+  
