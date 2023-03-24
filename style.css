@@ -39,7 +39,7 @@ body {
     font-family: 'Corben', cursive;
   }
   .bg1 {
-    background: url("../images/bg1.svg");
+    background: url("./images/bg1.svg");
     background-size: cover;
   }
   .h1 {
@@ -97,7 +97,7 @@ body {
     z-index: -1;
   }
   .bg::after {
-    background:url("../images/bg2.svg")  ;
+    background:url("./images/bg2.svg")  ;
     
     background-size: cover;
   }
